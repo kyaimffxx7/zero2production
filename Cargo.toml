@@ -3,4 +3,18 @@ name = "zero2prod"
 version = "0.1.0"
 edition = "2024"
 
+[lib]
+path = "src/lib.rs"
+
+[[bin]]
+name = "zero2prod"
+path = "src/main.rs"
+
+[dev-dependencies]
+reqwest = { version = "0.11", features = ["rustls"], default-features = false }
+
 [dependencies]
+actix-web = { version = "4", features = ["rustls"] }
+rustls = "0.21"
+rustls-pemfile = "1.0"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
