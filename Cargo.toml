@@ -14,7 +14,23 @@ path = "src/main.rs"
 reqwest = { version = "0.11", features = ["rustls"], default-features = false }
 
 [dependencies]
+config = "0.13"
 actix-web = { version = "4", features = ["rustls"] }
 rustls = "0.21"
 rustls-pemfile = "1.0"
 tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+serde = { version = "1.0", features = ["derive"] }
+uuid = { version = "1.0", features = ["v4"] }
+chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
+
+[dependencies.sqlx]
+version = "0.7"
+default-features = false
+features = [
+    "runtime-tokio-rustls",
+    "postgres",
+    "uuid",
+    "chrono",
+    "migrate",
+    "macros"
+]
