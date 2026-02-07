@@ -23,6 +23,7 @@
             postgresql
             # Additional useful tools
             bunyan-rs  # for log formatting
+            cargo-udeps
           ];
 
           shellHook = ''

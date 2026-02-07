@@ -14,6 +14,8 @@ path = "src/main.rs"
 reqwest = { version = "0.11", features = ["rustls"], default-features = false }
 
 [dependencies]
+tracing-log = "0.1"
+tracing = { version = "0.1", features = ["log"] }
 config = "0.13"
 actix-web = { version = "4", features = ["rustls"] }
 rustls = "0.21"
@@ -22,6 +24,8 @@ tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
 serde = { version = "1.0", features = ["derive"] }
 uuid = { version = "1.0", features = ["v4"] }
 chrono = { version = "0.4.22", default-features = false, features = ["clock"] }
+tracing-subscriber = { version = "0.3", features = ["registry", "env-filter"] }
+tracing-bunyan-formatter = "0.3"
 
 [dependencies.sqlx]
 version = "0.7"
