@@ -11,6 +11,7 @@ name = "zero2prod"
 path = "src/main.rs"
 
 [dev-dependencies]
+once_cell = "1.21.3"
 reqwest = { version = "0.11", features = ["rustls"], default-features = false }
 
 [dependencies]
